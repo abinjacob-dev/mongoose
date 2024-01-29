@@ -1,0 +1,23 @@
+
+// mongoode Schema
+
+const itemsSchema = new mongoose.Schema({
+  name : String
+})
+
+const Item = mongoose.model("item",itemsSchema)
+
+// Insert Items
+const Item_1 = new Item({
+  name : "Buy Food"
+})
+const Item_2 = new Item({
+  name : "Cook Food"
+})
+const Item_3 = new Item({
+  name : "Eat Food"
+})
+// insert to DB ...
+
+Item.insertMany([Item_1,Item_2,Item_3])
+
